@@ -1,0 +1,44 @@
+nav {
+    height: 75px;
+}
+
+nav div {
+    padding-top:15px;
+    background-color: #76A8D2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav div img {
+    width: 100%;
+    height: auto;
+}
+
+nav div h1 {
+    color: white;
+    font-size:2vw;
+}
+
+.link {
+    text-decoration:none;
+}
+
+nav * {
+    padding: 5px;
+}
+
+#logo {
+    flex: 1.5;
+}
+
+.navElement {
+    border-bottom: 2px solid #76A8D2;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navElement:hover {
+    border-bottom: 2px solid white;
+    background-color:rgba(118, 168, 210, .75);
+}

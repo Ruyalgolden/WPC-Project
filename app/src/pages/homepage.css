@@ -1,0 +1,52 @@
+.main-content {
+    flex-direction: column;
+}
+.intro-section {
+    background: #b7dde9;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .intro-section h1 {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 400;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chapters-wrap {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping */
+    gap: 16px;       /* Space between cards */
+    justify-content: center; /* Center the row */
+  }
+  
+  .chapter-card {
+    background: #e9f0f7;
+    color: #333;
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 220px;
+    max-width: 260px;
+    flex: 1 1 220px; /* Grow and shrink, base width 220px */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .chapter-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #7db1d6;
+  }
+  .chapter-card ul {
+    margin: 8px 0 0 0;
+    padding-left: 18px;
+  }
+  .chapter-card li {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  
