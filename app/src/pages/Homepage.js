@@ -70,7 +70,6 @@ const Home = () => {
                 <div className="container intro-section" style={introSectionStyle}>
                     <h1 className="khula-regular">Alpha Academy<br />Unleash your inner ALPHA through math!</h1>
                 </div>
-                {/* Add the CourseCarousel here */}
                 <CourseCarousel />
             </div>
         </>

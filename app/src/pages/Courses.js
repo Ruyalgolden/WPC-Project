@@ -6,7 +6,9 @@ function grabCourse(course) {
   const op = [];
   course.Chapters.forEach((chapter, ci) => {
     const lessons = [];
+    // console.log(chapter);
     chapter.lesson.forEach((lesson, li) => {
+      // console.log(lesson);
       lessons.push({
         lessonIndex: li,
         lessonName: lesson.lessonName,
@@ -53,9 +55,16 @@ function Courses() {
   }
 
   let filteredData = searchOptions.map((chapter) => {
-    const filteredLessons = chapter.chapterLessons.filter(
-      (lesson) =>
-        lesson.lessonName.toLowerCase().includes(searchTerm.toLowerCase())
+    // console.log(chapter.chapterLessons);
+    // const filteredLessons = "";
+    const filteredLessons = [];
+    chapter.chapterLessons.map(
+      (lesson) => {
+        if (lesson.lessonName.toLowerCase().includes(searchTerm.toLowerCase())) {
+          filteredLessons.push(lesson);
+        }
+
+      }
     );
     return {
       ...chapter,
@@ -67,22 +76,27 @@ function Courses() {
 
   let displayLesson;
   let displayChapterName;
-  if (searchTerm && filteredLessons.length > 0) {
-    const { chapterIndex, lessonIndex, chapterName } = filteredLessons[0];
-    displayLesson = currentCourse.Chapters[chapterIndex].lesson[lessonIndex];
-    displayChapterName = chapterName;
+  if (searchTerm && filteredData.length > 0 && filteredData[0].chapterLessons.length > 0) {
+    displayLesson = currentCourse.Chapters[selectedLesson.chapterIndex].lesson[selectedLesson.lessonIndex];
+    displayChapterName = currentCourse.Chapters[selectedLesson.chapterIndex].ChapterName;
   } else {
     displayLesson = currentCourse.Chapters[selectedLesson.chapterIndex].lesson[selectedLesson.lessonIndex];
     displayChapterName = currentCourse.Chapters[selectedLesson.chapterIndex].ChapterName;
   }
 
 
-  console.log(filteredData);
 
   return (
     <div className="container">
       <div className="container sideBar">
-        <h3>
+        <h3 style={{
+          color: "#fff",
+          border: "none",
+          textAlign: "center",
+          fontSize: "20px",
+          marginTop: "15px",
+          marginBottom: "0px"
+        }}>
           Courses
         </h3>
         <ul style={{ listStyle: "none", padding: 0, marginBottom: 20 }}>
@@ -99,7 +113,8 @@ function Courses() {
                   cursor: "pointer",
                   width: "100%",
                   textAlign: "left",
-                  marginBottom: 4,
+                  marginBottom: "4",
+                  fontSize: "20px",
                   fontWeight: idx === selectedCourseIndex ? "bold" : "normal",
                 }}
               >
@@ -121,22 +136,27 @@ function Courses() {
           filteredData.map((chapter, i) => (
             <div key={chapter.chapterIndex}>
               <h1 className="chapter-title">{chapter.chapterName.ChapterName}</h1>
-              <ul className="lesson-list">
+              <ul className="lesson-list"
+                style={{
+                  liststyleType: "none",
+                  padding: "0",
+                  margin: "0",
+                }}
+              >
                 {chapter.chapterLessons.map(lesson => (
                   <>
                     {
                       <li key={lesson.lessonIndex} className="lesson-anchor">
-                        <button
-                          style={{
-                            background: "none",
-                            border: "none",
-                            color: "#fff",
-                            textDecoration: "underline",
-                            cursor: "pointer",
-                            marginBottom: 4,
-                            textAlign: "left",
-                            width: "100%",
-                          }}
+                        <button style={{
+                          background: "none",
+                          border: "none",
+                          color: "#fff",
+                          cursor: "pointer",
+                          marginBottom: "4",
+                          textAlign: "left",
+                          width: "100%",
+                          fontSize: "15px",
+                        }}
                           onClick={() =>
                             setSelectedLesson({ chapterIndex: chapter.chapterIndex, lessonIndex: lesson.lessonIndex })
                           }
@@ -158,23 +178,13 @@ function Courses() {
       </div>
 
       <div style={{ flex: 1, padding: "32px" }}>
-        <h2>{currentCourse.courseName}</h2>
         <h3>{displayChapterName}</h3>
-        <div
-          style={{
-            marginTop: "1em",
-            padding: "1em",
-            border: "1px solid #ccc",
-            borderRadius: "8px",
-            background: "#f9f9f9",
-            maxWidth: 500,
-          }}
-        >
+        <div className="lessonOutput">
           <h2>{displayLesson.lessonName}</h2>
           <p>tbd</p>
         </div>
       </div>
-    </div>
+    </div >
 
   );
 }
