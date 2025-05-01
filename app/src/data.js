@@ -8,29 +8,22 @@ export const courses = [
                     {
                         lessonName: "Evaluating Limits",
                         videos: [
-
-                        ],
+                            "https://www.youtube.com/embed/YNstP0ESndU"
+                        ],                       
                         questions: [
                             {
-                                lessonName: "Evaluating Limits",
                                 Questions: [
                                     "lim x→[a] ([b]x + [c])",
                                     "lim x→[a] ([b]x<sup>2</sup> + [c]x + [d])",
                                     "lim x→[a] sin([b]x)",
                                     "lim x→[a] cos([b]x)",
-                                    "lim x→[a] e<sup>([b]x)</sup>"
 
                                 ],
                                 answers: [
-                                    "[b][a] + [c]",
-
-                                    "[b][a]<sup>2</sup> + [c][a] + [d]",
-
-                                    "sin([b][a])",
-
-                                    "cos([b][a])",
-
-                                    "e<sup>([b][a])</sup>"
+                                    "[b]*[a] + [c]",
+                                    "[b]*[a]*[a] + [c]*[a] + [d]",  
+                                    "sin([b]*[a])",
+                                    "cos([b]*[a])",                              
                                 ]
                             }
                         ]
@@ -38,7 +31,7 @@ export const courses = [
                     {
                         lessonName: "Finding limits as x approaches a number and the limit exists",
                         videos: [
-                            "https://www.youtube.com/watch?v=YNstP0ESndU"
+                            "https://www.youtube.com/embed/YNstP0ESndU"
                         ],
                         questions: [
                             {
@@ -49,12 +42,12 @@ export const courses = [
                                     "lim x→[a] ln(x + 3)",
                                     "lim x→2⁻ ( (x - [a])(x + [b]) ) / ( (x - [a])<sup>2</sup> ) + [c]",
                                     "lim x→(1/[a])⁺ [b]e^([a]x - 2)"
-                                ],
+                                ],                              
                                 answers: [
-                                    "2[a]<sup>2</sup> - 3[a] + 5",
-                                    "sin([a]π/2)",
-                                    "cos([a]π/2)",
-                                    "ln([a] + 3)",
+                                    "2*[a]*[a] - 3*[a] + 5",
+                                    "sin([a]*π/2)",
+                                    "cos([a]*π/2)",
+                                    "ln([a] + 3)", 
                                     `
                                     if (([a] + [b] > 0)) {
                                         return "+∞";                               
@@ -132,22 +125,22 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                Questions: [
+                                Questions: [                             
                                     "Consider f(x) = { [b]x + [c], if x < [a]; x<sup>2</sup>, if x ≥ [a] }. Find lim x→[a]⁻ f(x).",
                                     "Consider f(x) = { [b]x + [c], if x < [a]; x<sup>2</sup>, if x ≥ [a] }. Find lim x→[a]⁺ f(x).",
                                     "Consider f(x) = { [b]x + [c], if x < [a]; x<sup>2</sup>, if x ≥ [a] }. For what values of [b] and [c] does lim x→[a] f(x) exist?",
                                     "Consider f(x) = { [b]x + [c], if x ≤ [a]; [d]x, if x > [a]}. Find the limit as x approaches [a] from the left.",
                                     "Consider f(x) = { [b]x + [c], if x ≤ [a]; [d]x, if x > [a]}. if limit x approaches [a] exist, what is the relationship between b, c and d"
-
                                 ],
-                                answers: [
-                                    "lim x→[a]⁻ ([b]x + [c]) = [b][a] + [c]",
+
+                                answers: [                             
+                                     "lim x→[a]⁻ ([b]x + [c]) = [b]*[a] + [c]",
                                     "lim x→[a]⁺ (x<sup>2</sup>) = [a]<sup>2</sup>",
-                                    "The limit exists if lim x→[a]⁻ f(x) = lim x→[a]⁺ f(x), which means [b][a] + [c] = [a]<sup>2</sup>. So, [c] = [a]<sup>2</sup> - [b][a]",
-                                    "the left limit is:[b][a]+[c]",
-                                    "For the limit to exist:[b][a]+[c]=[d][a] if [a]≠0 [b]+[c]/[a]=[d]"
+                                    "The limit exists if lim x→[a]⁻ f(x) = lim x→[a]⁺ f(x), which means [b]*[a] + [c] = [a]<sup>2</sup>. So, [c] = [a]<sup>2</sup> - [b]*[a]",
+                                     "the left limit is:[b]*[a]+[c]",
+                                    "For the limit to exist:[b]*[a]+[c]=[d]*[a] if [a]≠0 [b]+[c]/[a]=[d]"
                                 ]
-                            },
+                            }
                         ]
                     },
                     {
@@ -157,18 +150,18 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                Questions: [
+                                Questions: [                                    
                                     "[a] ≤ f(x) ≤ [b], and lim x→[c] [a] = L, lim x→[c] [b] = L, what is lim x→[c] f(x)",
                                     "If |f(x) - L| ≤ g(x), and lim x→[a] g(x) = 0, then what is the limit of f(x) as x approaches a?",
                                     "If [a] ≤ f(x) ≤ [b] for all x near c except possibly at c, and if lim x→c [a] = lim x→c [b] = L, what can be concluded about lim x→c f(x)?",
                                     "If g(x) ≤ f(x) ≤ h(x) for all x near [a] (except possibly at [a]) and lim x→[a] g(x) = lim x→[a] h(x) = L, what is lim x→[a] f(x)?",
                                     "Given that f(x) is squeezed between [a] and [b], and both [a] and [b] approach L as x approaches [c], what is the limit of f(x) as x approaches [c]?"
                                 ],
-                                answers: [
-                                    "L",
-                                    "L",
-                                    "lim x→c f(x) = L",
-                                    "L",
+                                answers: [                                    
+                                    "L", 
+                                    "L", 
+                                    "lim x→c f(x) = L", 
+                                    "L", 
                                     "lim x→[c] f(x) = L"
                                 ]
                             },
@@ -182,12 +175,12 @@ export const courses = [
                         questions: [
                             {
                                 Questions: [
-                                    "Find the vertical asymptote(s) of f(x) = 1 / ([a]x - [b]).",
-                                    "Determine the horizontal asymptote of f(x) = ([a]x + [b]) / ([c]x + [d]).",
-                                    "What is the end behavior of f(x) = [a]x<sup>2</sup> + [b]x + [c] as x approaches positive and negative infinity?",
-                                    "For f(x) = [a] / (x - [b])<sup>2</sup>, describe the behavior of f(x) as x approaches [b].",
-                                    "Analyze the function f(x) = [a]e<sup>[b]x</sup> + [c] as x approaches positive and negative infinity."
-                                ],
+                                  "Find the vertical asymptote(s) of f(x) = 1 / ([a]x - [b]).",
+                                  "Determine the horizontal asymptote of f(x) = ([a]x + [b]) / ([c]x + [d]).",
+                                  "What is the end behavior of f(x) = [a]x<sup>2</sup> + [b]x + [c] as x approaches positive and negative infinity?",
+                                  "For f(x) = [a] / (x - [b])<sup>2</sup>, describe the behavior of f(x) as x approaches [b].",
+                                  "Analyze the function f(x) = [a]e<sup>[b]x</sup> + [c] as x approaches positive and negative infinity."
+                              ],
                                 answers: [
                                     "x = [b]/[a]",
                                     "y = [a]/[c]",
@@ -196,8 +189,8 @@ export const courses = [
                                     `As x approaches +∞, if [b] > 0, f(x) approaches +∞ (or -∞ if [a] < 0); if [b] < 0, f(x) approaches [c].
                                     As x approaches -∞, if [b] > 0, f(x) approaches [c]; if [b] < 0, f(x) approaches +∞ (or -∞ if [a] < 0).
                                     If b = 0 then f(x) appproaches [a]+[c]`
-                                ]
-                            }
+                              ]
+                          }
 
                         ]
                     },
@@ -216,12 +209,12 @@ export const courses = [
                                     "what is the horizontal asymptote of f(x)=([a]x^2+[b]x+[c])/([d]x^2+[e]x+[f])"
                                 ],
                                 answers: [
-                                    "x = [b]/[a]",
-                                    "y = [a]/[c]",
-                                    "x=[b],x=[c]",
+                                    "x = [b]/[a]", 
+                                    "y = [a]/[c]", 
+                                    "x=[b],x=[c]", 
                                     "The limit of f(x) as x approaches + or - infinity is [a]",
                                     "y=[a]/[d]"
-                                ]
+                                ]                                
                             }
                         ]
                     },
@@ -259,24 +252,24 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                Questions: [
+                                Questions: [                                    
                                     "Given a function f(x) = [a]x + [b], if f(x) is continuous at x = [c], what is f([c])?",
                                     "If f(x) is continuous at x = [a] and g(x) is continuous at x = [a], what can be said about the continuity of f(x) + g(x) at x = [a]?",
                                     "Suppose f(x) is continuous at x = [a], and f([a]) = [b]. What is the value of lim x→[a] f(x)?",
                                     "If f(x) is defined as f(x) = ([a]x + [b]) / (x - [c]) and f(x) is continuous at x=[c], what condition must be true for the continuity.",
                                     "Given a function f(x) = [a]x^2 + [b]x + [c], what is lim x→[d] f(x) if f(x) is continuous at x=[d]?"
                                 ],
-                                answers: [
+                                answers: [                                   
                                     "[a][c] + [b]",
-                                    "f(x) + g(x) is also continuous at x = [a]",
+                                    "f(x) + g(x) is also continuous at x = [a]", 
                                     "[b]",
                                     "[a][c] + [b]=0",
                                     "[a][d]^2 + [b][d] + [c]"
 
+                                    
 
 
-
-
+                                    
                                 ]
                             }
                         ]
@@ -288,14 +281,14 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                Questions: [
+                                Questions: [                                  
                                     "What is the value of x for which f(x) has a removable discontinuity, where f(x) = ([a]x + [b]) / (x - [c])?",
                                     "If f(x) has a jump discontinuity at x = [a], and lim x→[a]⁻ f(x) = [b], lim x→[a]⁺ f(x) = [c]. What is the size of the jump?",
                                     "Given a function f(x) with a nonremovable discontinuity at x = [a], describe the behavior of the function around x=[a]",
                                     "Describe the behavior of f(x) = 1 / ([a]x - [b]) as x approaches [b]/[a], noting the type of discontinuity.",
                                     "If f(x) = ([a]x + [b]) / (x^2 - [c]), what values of x result in a discontinuity in f(x)"
                                 ],
-                                answers: [
+                                answers: [                                   
                                     "x = [c]",
                                     "|[c] - [b]|",
                                     "The left and right-hand limits of f(x) as x approaches [a] are not equal. In other words, lim x→[a]⁻ f(x) ≠ lim x→[a]⁺ f(x), or at least one of the limits does not exist.",
@@ -362,7 +355,7 @@ export const courses = [
                                     "(sin(x+[a])-sin(x))/[a]",
                                     "[a](2x+[c])+[b]",
                                     "(cos(x+[a])-cos(x))/[a]"
-
+                                    
                                 ]
                             }
                         ]
@@ -374,7 +367,7 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                Questions: [
+                                Questions: [   
                                     "Using the limit definition, what is the derivative of f(x) = [a]x at any point x?",
                                     "Using the limit definition, determine the derivative of f(x) = [a]x<sup>2</sup> at any point x.",
                                     "Using the limit definition, what is the derivative of f(x) = [a]x + [b] at any point x?",
@@ -382,12 +375,12 @@ export const courses = [
                                     "Using the limit definition, what is the derivative of f(x) = [a]x<sup>3</sup> at any point x"
                                 ],
                                 answers: [
-                                    "[a]",
-                                    "2[a]x",
-                                    "[a]",
+                                    "[a]", 
+                                    "2[a]x", 
+                                    "[a]", 
                                     "-[a]/x<sup>2</sup>",
                                     "3[a]x<sup>2</sup>"
-
+                                    
                                 ]
                             }
                         ]
@@ -399,17 +392,17 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                questions: [
+                                questions:[
                                     "If f(x) = [a]x + [b], what is the derivative at x=c?",
                                     "If f(x) = [a]x^2 + [b]x + [c] does f'(x) exist at x = 0?",
                                     "If f(x) = |[a]x + [b]| does f'(x) exist at x = -[b]/[a]",
                                     "If f(x) = [a]x^3 + [b]x does f'(x) exist at x = 0?",
                                     "If f(x) = [a]ln|x| does f'(x) exist at x = 0?"],
-                                answers: [
-                                    "[a]",
+                                answers: [ 
+                                    "[a]", 
                                     "Yes, f'(0) = [b]",
                                     "No, because of the absolute value at x=-[b]/[a]",
-                                    "Yes f'(0)=[b]",
+                                    "Yes f'(0)=[b]", 
                                     "No, ln(0) is undefined"
                                 ]
                             }
@@ -444,7 +437,7 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                Questions: [
+                                Questions: [                             
                                     "Consider f(x) = { [a]x + [b], if x < [c]; [d]x<sup>2</sup> + [e]x +[f], if x ≥ [c] }. Find f'(x) if x < [c].",
                                     "Consider f(x) = { [a]x + [b], if x < [c]; [d]x<sup>2</sup> + [e]x +[f], if x ≥ [c] }. Find f'(x) if x > [c].",
                                     "Consider f(x) = { [a]x + [b], if x < [c]; [d]x<sup>2</sup> + [e]x +[f], if x ≥ [c] }. If f'(x) exist at x = [c] what should be the relationship between a,d,e",
@@ -452,15 +445,15 @@ export const courses = [
                                     "Consider f(x) = { [a]sin(x) + [b], if x < [c]; [d]cos(x) + [e]x, if x ≥ [c] }. Find f'(x) if x > [c]."
 
                                 ],
-                                answers: [
+                                answers: [   
                                     "f'(x) = [a]",
                                     "f'(x) = 2[d]x+[e]",
                                     "The slope of the left side should be the same as the slope of the right side when x=[c]. so  [a] = 2[d][c]+[e]. The value of the left side when x=[c] should be the same as the right side to ensure the existance. [a][c]+[b]=[d][c]^2+[e][c]+[f]",
                                     "f'(x) = [a]cos(x)",
                                     "f'(x) = -[d]sin(x)+[e]"
 
-
-
+                                   
+                                     
                                 ]
                             }
                         ]
@@ -480,7 +473,7 @@ export const courses = [
                                 ],
                                 answers: [
                                     "1/x",
-                                    "ln[a]*[b]*[a]<sup>[b]x</sup>",
+                                    "ln([a])*[b]*[a]<sup>[b]x</sup>",
                                     "[b]e<sup>[b]x</sup>",
                                     "ln[a]*[c]*[b]*[x]<sup>[c]-1</sup>[a]<sup>[b]x<sup>[c]</sup></sup>"
                                 ]
@@ -502,10 +495,10 @@ export const courses = [
                                     "d/dx √([a]x + [b])",
                                 ],
                                 answers: [
-                                    "[a]/([a]x + [b])",
-                                    "ln([a]) * [b] * [a]<sup>([b]x)</sup>",
-                                    "(([c]) * ([a]x+[b])<sup>([c]x)-1</sup>) * ([a]) + (ln([a]x+[b])) * ([a]x+[b])<sup>([c]x)</sup> * [c]",
-                                    "-([a]*[b])/([b]x+[c])<sup>2</sup>",
+                                    "[a]/([a]x + [b])", 
+                                    "ln([a]) * [b] * [a]<sup>([b]x)</sup>", 
+                                    "([c]*[a] * ([a]x+[b])<sup>([c]x)-1</sup>) + (ln([a]x+[b])) * ([a]x+[b])<sup>([c]x)</sup> * [c]", 
+                                    "-([a]*[b])/([b]x+[c])<sup>2</sup>", 
                                     "[a]/(2√([a]x + [b]))"
                                 ]
                             },
@@ -518,16 +511,16 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                lessonName: "Implicit differentiation",
+                                lessonName:"Implicit differentiation",
                                 Questions: [
                                     "([a]x)<sup>2</sup> + ([b]y)<sup>2</sup> = [c], find dy/dx.",
                                     "x<sup>[a]</sup> + y<sup>[b]</sup> = [c], find dy/dx.",
                                     "([a]x)y + [b]x + [c]y = [d], find dy/dx.",
-                                    "([a]x)<sup>[b]</sup>y + ([c]y)<sup>[d]</sup>x = [e], find dy/dx.",
+                                    "([a]x)<sup>[b]</sup>y + ([c]y)<sup>[d]</sup>x = [e], find dy/dx.",                                  
                                     "sin([a]x) + cos([b]y) = [c], find dy/dx."
                                 ],
                                 answers: [
-                                    "-([a]x)/([b]y)",
+                                    "-(([a]x)*([a]))/(([b]y)*([b]))",
                                     "-(x<sup>[a]-1</sup>)/([b]y<sup>[b]-1</sup>)",
                                     "-[([a]y + [b])]/([a]x + [c])",
                                     "-( ([a]*[b]*([a]x)<sup>[b]-1</sup>)*y + ([c]y)<sup>[d]</sup> ) / (([a]x)<sup>[b]</sup> + [c]*[d]*([c]y)<sup>[d]-1</sup>*x)",
@@ -557,7 +550,7 @@ export const courses = [
                                     "1/(3[a]+[b])",
                                     "1/(3[a]^2+2[b][a])"
                                 ]
-
+                                
                             }
                         ]
                     },
@@ -661,7 +654,7 @@ export const courses = [
                                     "[b]e<sup>([b]-[a])t</sup>/[a]",
                                     "[b]t/[a]"
                                 ]
-
+                                
                             }
                         ]
                     },
@@ -723,14 +716,14 @@ export const courses = [
 
                                 ],
                                 answers: [
-                                    "[b]",
-                                    "[b]cos([b]([a]-[a]))=[b]",
-                                    "[b]e^([b]*([a]-[a]))=[b]",
-                                    "if ([b] != 0) { return [a]/[b]; } else { return 'undefined'; }",
-                                    "1/[a]"
+                                   "[b]",
+                                   "[b]cos([b]*([a]-[a]))=[b]",
+                                   "[b]e^([b]*([a]-[a]))=[b]",
+                                   "if ([b] != 0) { return [a]/[b]; } else { return 'undefined'; }",
+                                   "1/[a]"
+                                    
 
-
-
+                                    
                                 ]
                             }
                         ]
@@ -743,16 +736,16 @@ export const courses = [
                         questions: [
                             {
                                 Questions: [
-                                    "Given the function f(x)=[a]x + [b]. If f(x) is locally linear at x = [c], what is the equation of the tangent line to f(x) at x = [c]?",
-                                    "Given a function f(x) that is locally linear at x = [a] with f([a]) = [b] and f'([a]) = [c]. What is the equation of the tangent line to f(x) at x = [a]?",
-                                    "If f(x)=[a]x^2 + [b]x + [c] and f(x) is locally linear at x = [d], what is the equation of the tangent line at x=[d]?",
-                                    "If f(x) is differentiable at x=[a], write the local linear approximation L(x) for f(x) near x=[a]",
-                                    "if f(x)=[a]x^3 + [b]x^2+[c]x+[d], and f(x) is locally linear at x=[c] what is the tangent line"
+                                   "Given the function f(x)=[a]x + [b]. If f(x) is locally linear at x = [c], what is the equation of the tangent line to f(x) at x = [c]?",
+                                   "Given a function f(x) that is locally linear at x = [a] with f([a]) = [b] and f'([a]) = [c]. What is the equation of the tangent line to f(x) at x = [a]?",
+                                   "If f(x)=[a]x^2 + [b]x + [c] and f(x) is locally linear at x = [d], what is the equation of the tangent line at x=[d]?",
+                                   "If f(x) is differentiable at x=[a], write the local linear approximation L(x) for f(x) near x=[a]",
+                                   "if f(x)=[a]x^3 + [b]x^2+[c]x+[d], and f(x) is locally linear at x=[c] what is the tangent line"
                                 ],
                                 answers: [
                                     "y = [a](x-[c]) + ([a][c]+[b])",
                                     "y = [c](x-[a]) + [b]",
-                                    "y=(2[a][d]+[b])(x-[d]) + ([a][d]^2+[b][d]+[c])",
+                                    "y=(2[a][d]+[b])*(x-[d]) + ([a][d]*[d]+[b][d]+[c])",
                                     "L(x) = f([a]) + f'([a])(x-[a])",
                                     "y=(3[a][c]^2+2[b][c]+[c])(x-[c]) + ([a][c]^3+[b][c]^2+[c]^2+[d])"
 
@@ -817,7 +810,7 @@ export const courses = [
                                     Setting f'(c) equal to the average rate of change, we get 2c = b + a.
                                     Thus, c = (a + b) / 2.
                                     Therefore, the x-coordinate of the point where the tangent line to f(x) is parallel to the secant between the points (a,f(a)) and (b,f(b)) is the average of a and b, specifically (a + b) / 2.`
-
+                                   
 
                                 ]
                             }
@@ -840,11 +833,11 @@ export const courses = [
                                 ],
                                 answers: [
                                     "v(t) = 2[a]t + [b]",
-                                    "a(t) = 6[a]t + 2[b]",
+                                    "a(t) = 6[a]t + 2[b]", 
                                     "|v(t)| = |[a]t + [b]|",
                                     "v(t) = [a][b]cos([b]t)",
                                     "a(t) = -[a][b]<sup>2</sup>sin([b]t)"
-
+                                    
                                 ]
                             }
                         ]
@@ -856,14 +849,14 @@ export const courses = [
                         ],
                         questions: [
                             {
-                                Questions: [
+                                Questions: [                                  
                                     "A particle moves in the xy-plane such that its position at time t is given by the vector r(t) = <[a]t + [b], [c]t^2>. Find the velocity vector v(t).",
                                     "A particle's position is given by r(t) = <[a]cos(t), [b]sin(t)>. Find the acceleration vector a(t).",
                                     "If a particle's position is r(t) = <t, [a]t^2>, find the magnitude of its velocity at time t = [b].",
                                     "The position of a particle is given by r(t) = <[a]e^t, [b]t>. Find the speed of the particle at time t.",
                                     "A particle's motion is described by r(t) = <[a]cos([b]t), [a]sin([b]t)>. Find the distance the particle travels from t=0 to t=π/[b]."
                                 ],
-                                answers: [
+                                answers: [                                   
                                     "v(t) = <[a], 2[c]t>",
                                     "a(t) = <-[a]cos(t), -[b]sin(t)>",
                                     `
@@ -898,7 +891,7 @@ export const courses = [
                                 answers: [
                                     "[a]<sup>2</sup>/4",
                                     "The field will be a square with each side equal to [a]/4",
-                                    "V=([b]-2[a])<sup>2</sup>*[a]",
+                                    "V=([b]-2*[a])*([b]-2*[a])*[a]", 
                                     "[a]<sup>2</sup>/8",
                                     `The height will be equal to the diameter of the base, h = 2r.
                                     The radius r = ∛([a]/(2π)) cm and h = 2∛([a]/(2π)) cm`
@@ -924,11 +917,11 @@ export const courses = [
                                     "2π[a][b] cm^2/s",
                                     "-2[a][b] cm^2/s",
                                     "[a]/(3[b]^2) cm/s",
-                                    "[a]/(4π[b]^2) cm/s",
+                                    "[a]/(4*π*[b]*[b]) cm/s",
                                     "-[b][c]/√( ([a]^2 - [c]^2)) m/s"
-
+                                    
                                 ]
-                            }
+                            } 
                         ]
                     }
                 ]
@@ -941,18 +934,16 @@ export const courses = [
                 ChapterName: "Coming Soon...",
                 lesson: [
                     {
-                        lessonName: "to be done",
+                        lessonName: "",
                         videos: [
 
                         ],
                         questions: [
-                            {
-                                questions: [],
-                                answers: [
-                                ]
-                            }
+                        ],
+                        answers: [
+
                         ]
-                    }
+                    },
                 ]
             }
         ]
